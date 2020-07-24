@@ -21,7 +21,6 @@ class ImagesContainer extends React.Component {
         this.setState({indexCarusel : selectedIndex})
     }
     componentWillReceiveProps(props){
-//        console.log('imagenesContainerProps', this.state.imagenes)       
         this.setState({imagenes : props.imagenes})
     }
     render() {
@@ -37,14 +36,6 @@ class ImagesContainer extends React.Component {
                                     return(
                                         <Col sm="4" key={i}>
                                             <ImagesComponent imagen={imagen} onClick={(e)=>this.handleSelect(i,e)}></ImagesComponent>
-
-{/*                                             <img
-                                                className="d-block w-100"
-                                                src={imagen.urls.thumb}
-                                                onClick={(e)=>this.handleSelect(i,e)}
-                                                id={imagen.id}
-                                            />
- */}
                                          </Col>
                                     )
                                 })
@@ -58,12 +49,6 @@ class ImagesContainer extends React.Component {
                                 this.state.imagenes.map((imagen, i)=>{
                                     return(
                                         <Carousel.Item key={i}>
-{/*                                             <img onClick={()=>alert("holaaaa")}
-                                            className="d-block w-100"
-                                            alt={imagen.alt_description}
-                                            src={imagen.urls.thumb}
-                                            />
- */}
                                             <ImagenRedux imagen={imagen}/>
                                             <Carousel.Caption>
                                             <h3>{imagen.alt_description}</h3>
@@ -76,12 +61,7 @@ class ImagesContainer extends React.Component {
                         </Carousel>
                     </Col>
                 </Row>
-{/*                                    console.log('imagen', imagen)
-                                    return(
-                                        <ImagesComponent imagen={imagen}></ImagesComponent>
-                                    )
-*/}
-             </Container>
+            </Container>
         )
     }
 }

@@ -20,18 +20,6 @@ export const crearPedido = (p) => {
     }
 }
 
-export const agregarAlPedido = (idPedido, idPintura, monto) => {
-    //Action
-    return {
-        type: 'AGREGAR_AL_PEDIDO',
-        payload: {
-            idPedido:idPedido,
-            idPintura:idPintura,
-            monto:monto
-        }
-    }
-}
-
 export const cancelarPedido = (idPedido, monto) => {
     //Action
     return {
@@ -89,28 +77,19 @@ export const limpiar = (id, det, monto) => {
 
 export const verClientes = () => {
     return async (dispatch, getState) => {
-        try {
-            const respone = await unsplash.get('/search/users', {
-                params : {
-                    query : 'a',
-                    orientation : 'portrait',
-                    per_page : 50
-                },
-            })
+        const respone = await unsplash.get('/search/users', {
+            params : {
+                query : 'a',
+                orientation : 'portrait',
+                per_page : 50
+            },
+        })
 
-            dispatch( {
-                type : 'NEW_USER_LIST',
-                payload : {
-                    clientes : respone.data.results
-                }
-            })
-        } catch {
-            dispatch( {
-                type : 'ERROR',
-                payload : {
-                    mensaje : 'no se pudo conectar'
-                }
-            })
-        }
+        dispatch( {
+            type : 'NEW_USER_LIST',
+            payload : {
+                clientes : respone.data.results
+            }
+        })
     }
 }

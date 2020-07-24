@@ -9,8 +9,6 @@ import Lista from '../Pedido/Lista'
 import Vender from '../Pedido/Vender'
 import UserList from '../UserList'
 
-//import {combineReducers, createStore} from 'redux'
-
 const App = () => {
     return (
         <Container>

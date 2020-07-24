@@ -9,7 +9,6 @@ const Menu = () => {
         <nav id="menu">
             <ul>
                 <li><Link to="/crearPedido" >Crear Pedido</Link></li>
-{/*                 <li><Link to="/agregarPedido" >Agregar a Pedido</Link></li> */}
                 <li><Link to="/cancelarPedido" >Cancelar Pedido</Link></li>
                 <li><Link to="/vender" >Vender</Link></li>
                 <li><Link to="/clientes" >Clientes</Link></li>

@@ -10,11 +10,6 @@ class ImagesComponent extends React.Component {
         this.referencia = React.createRef()
         console.log('imagenesComponent', this.state.imagen)
     }
-/*     componentWillReceiveProps(props){
-        console.log('imagenesComponentProps', props.imagen)       
-        this.setState({imagen : props.imagen})
-    }
- */
     componentDidMount() {
         this.referencia.current.addEventListener('mouseover',
         (e) => {
@@ -35,19 +30,6 @@ class ImagesComponent extends React.Component {
             ref={this.referencia}
             onClick={(e)=>this.props.onClick(e)}
             />
-
-/*             <Carousel.Item>
-                <img
-                className="d-block w-100"
-                alt={this.state.imagen.alt_description}
-                src={this.state.imagen.urls.full}
-                />
-                <Carousel.Caption>
-                <h3>{this.state.imagen.alt_description}</h3>
-                <p>Autor : {this.state.imagen.user.name}</p>
-                </Carousel.Caption>
-            </Carousel.Item>
- */
         )
     }
 }

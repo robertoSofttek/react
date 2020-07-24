@@ -10,8 +10,6 @@ const Lists = (props) => {
 
     const selecciona = (item, i) => {
         props.selPedido(item)
-/*         console.log('rowRef', rowRef[i])
-        rowRef[i].display = 'none' */
     }
 
     useEffect( ()=> {

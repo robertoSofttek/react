@@ -11,33 +11,13 @@ class InputSearch extends React.Component {
         }
         this.onChangeSearch = this.onChangeSearch.bind(this)
         this.search = this.search.bind(this)
-        }
-        onChangeSearch(e) {
-            e.preventDefault()
-            this.setState({searchText:e.target.value})
-        }
-        //petición normal
-    /*     async search() {
-            const response = await axios.get("https://api.unsplash.com/search/photos", {
-                params : {
-                    query : this.state.searchText,
-                    orientation : 'portrait'
-                },
-                headers: {
-                    Authorization: 'Client-ID XRO1v15YVHTASQXot7bmDcRi7ritH4LRPraE6FPiP0Y'
-                }
-            })
-        }
-    */
+    }
+    onChangeSearch(e) {
+        e.preventDefault()
+        this.setState({searchText:e.target.value})
+    }
     search() {
         console.log('this.props.tipo', this.props.tipo)
-/*         switch(this.props.tipo) {
-            case 'images' : {this.searchUS() console.log('this.searchUS()')};
-            case 'usersJPH'  : this.searchUsersJPH();
-            case 'users': this.searchUS();
-        }
- */
-        //usersJPH, photos, users
         if(this.props.tipo == 'usersJPH') {
             this.searchUsersJPH()
         } else {
@@ -52,10 +32,6 @@ class InputSearch extends React.Component {
                 orientation : 'portrait',
                 per_page : this.props.tipo=='photos'?9:12
             },
-    /*         headers: {
-                Authorization: 'Client-ID XRO1v15YVHTASQXot7bmDcRi7ritH4LRPraE6FPiP0Y'
-            }
-    */
         })
         console.log('response',  response)
         this.props.mostrar(response.data.results)
