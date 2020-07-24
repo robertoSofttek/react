@@ -1,0 +1,65 @@
+.ui.comments{
+    max-width:950px
+}
+.ui.comments .comment{
+    text-align: justify;
+}
+.ui.comments .comment .avatar{
+    display:block;
+    width:4em;
+    height:auto;
+    float:left;
+    margin:.5em .5em 0
+}
+.ui.comments .comment .avatar img,.ui.comments .comment img.avatar{
+    border-radius:.5rem
+}
+.ui.comments .comment .author{
+    color:rgba(255,255,255,.87);
+}
+.ui.comments .comment a.author{
+    cursor:pointer
+}
+.ui.comments .comment a.author:hover{
+    color:rgb(174, 234, 251);
+    cursor:pointer
+}
+.ui.comments .comment .metadata{
+    color:rgba(255,255,255,.4);
+}
+.ui.comments .comment .text{
+    color:rgba(255,255,255,.87);
+}
+.ui.comments .comment .actions a{
+    color:rgba(255,255,255,.4)
+}
+.ui.comments .comment .actions a.active,.ui.comments .comment .actions a:hover{
+    color:rgba(255,255,255,.8)
+}
+.ui.threaded.comments .comment .comments{
+    -webkit-box-shadow:-1px 0 0 rgba(234,236,238);
+    box-shadow:-1px 0 0 rgba(234,236,238)
+}
+
+#menu {
+    color: #fff;
+    background: #000;
+    padding: 10px 250px;
+}
+#menu ul {
+    display: flex;
+    justify-content: stretch;
+    list-style: none;
+}
+#menu a {
+    padding: 10px 20px;
+    color: #fff;
+}
+#menu a:hover {
+    background: #676767;
+}
+.fotoPerfil img {
+    border-radius:.8rem;
+    width: 30px;
+    margin:5px;
+}
